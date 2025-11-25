@@ -42,7 +42,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 175, 238, 238;
+  --bs-primary-rgb: 44, 112, 110;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -73,8 +73,8 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #4eb5b5;
-  --bs-link-hover-color: #3b8f8f;
+  --bs-link-color: #439491;
+  --bs-link-hover-color: #296361;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
