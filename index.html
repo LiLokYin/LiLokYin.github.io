@@ -236,7 +236,37 @@
             }
         </script>
 </head>
+<body class="bg-background text-primary">
 
+    <!-- 導航列 (Navigation) - 專業且置頂 -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-surface">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <!-- Logo/名稱 -->
+            <a href="#hero" class="text-xl font-extrabold tracking-tight text-primary hover:text-secondary transition duration-150">
+                Li Lok Yin | Portfolio
+            </a>
+            <!-- 導航連結 (桌面版) -->
+            <div class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#intro" class="nav-link hover:text-primary transition duration-150 text-secondary">簡介</a>
+                <a href="#edu" class="nav-link hover:text-primary transition duration-150 text-secondary">學歷</a>
+                <a href="#portfolio" class="nav-link hover:text-primary transition duration-150 text-secondary">作品集</a>
+                <a href="#contact" class="nav-link hover:text-primary transition duration-150 text-secondary">聯絡</a>
+            </div>
+            <!-- 手機版選單按鈕 (隱藏) -->
+            <button id="menu-button" class="md:hidden p-2 text-primary hover:text-secondary rounded-md transition duration-150">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- 手機版下拉選單 -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white/95 border-b border-surface">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+                <a href="#intro" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-surface">簡介</a>
+                <a href="#edu" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-surface">學歷</a>
+                <a href="#portfolio" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-surface">作品集</a>
+                <a href="#contact" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-surface">聯絡</a>
+            </div>
+        </div>
+    </header>
     <!-- 主內容區塊容器 -->
     <main class="max-w-7xl mx-auto">
         
