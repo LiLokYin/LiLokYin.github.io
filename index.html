@@ -12,6 +12,39 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+TC:wght@100..900&display=swap');
+    body {
+        font-family: 'Noto Sans TC', 'Inter', sans-serif;
+    }
+    /* 定義 Tailwind 顏色變量 (基於您原本的樣式) */
+    :root {
+        --color-primary: #007bff; /* 假設 primary 是藍色 */
+        --color-secondary: #6c757d; /* 假設 secondary 是灰色 */
+        --color-background: #f8f9fa; /* 假設背景是淺灰 */
+        --color-surface: #e9ecef; /* 假設表面是更淺的灰色 */
+    }
+    .text-primary { color: var(--color-primary); }
+    .text-secondary { color: var(--color-secondary); }
+    .bg-primary { background-color: var(--color-primary); }
+    .bg-secondary { background-color: var(--color-secondary); }
+    .bg-background { background-color: var(--color-background); }
+    .bg-surface { background-color: var(--color-surface); }
+    .border-primary { border-color: var(--color-primary); }
+    .border-surface { border-color: var(--color-surface); }
+
+    /* 隱藏滾動條 */
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .hide-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+</style>
+</head>
+<body class="bg-background text-primary">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
@@ -50,6 +83,12 @@
                 <a href="#edu" class="nav-link hover:text-primary transition duration-150 text-secondary">學歷</a>
                 <a href="#portfolio" class="nav-link hover:text-primary transition duration-150 text-secondary">作品集</a>
                 <a href="#contact" class="nav-link hover:text-primary transition duration-150 text-secondary">聯絡</a>
+                <a href="#skills" class="nav-link hover:text-primary transition duration-150 text-secondary">技能/經歷</a>
+                <a href="#portfolio" class="nav-link hover:text-primary transition duration-150 text-secondary">作品集</a>
+                <a href="#awards" class="nav-link hover:text-primary transition duration-150 text-secondary">獎項</a></div>
+            <a href="#skills" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-surface">技能/經歷</a>
+            <a href="#portfolio" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-surface">作品集</a>
+            <a href="#awards" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-surface">獎項</a></div>
             </div>
             <!-- 手機版選單按鈕 (隱藏) -->
             <button id="menu-button" class="md:hidden p-2 text-primary hover:text-secondary rounded-md transition duration-150">
