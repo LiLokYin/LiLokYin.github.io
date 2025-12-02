@@ -32,11 +32,10 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#future">Future</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#future">Porfolio</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Porfolio</a></li>
                 </ul>
             </div>
         </nav>
-        <body class="bg-background text-primary">
 
     <!-- 導航列 (Navigation) - 專業且置頂 -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-surface">
@@ -67,7 +66,6 @@
             </div>
         </div>
     </header>
-            
         <!-- Page Content-->
         <div class="container-fluid p-0">
      <!-- 主內容區塊容器 -->
@@ -117,12 +115,11 @@
                 </div>
             </section>
             <hr class="m-0" />
-        
         <!-- 學歷 (Education) 區塊 -->
         <section id="edu" class="py-20 px-4 sm:px-6 lg:px-8 border-b border-surface">
             <h2 class="text-4xl font-bold mb-12 text-center text-primary">學術與背景</h2>
             <div class="max-w-3xl mx-auto space-y-12">
-                
+
                 <!-- 1. 大學學歷：世新大學 (Shih Hsin University) -->
                 <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md border border-gray-100 transition hover:shadow-lg">
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
@@ -136,7 +133,6 @@
                         <li>課程專案/創作：目前專題與畢業創作正在積極製作中。</li>
                     </ul>
                 </div>
-
                 <!-- 2. 高中學歷：CCC Kei To Secondary School (中華基督教會基道中學) -->
                 <div class="bg-white p-6 sm:p-8 rounded-xl shadow-md border border-gray-100 transition hover:shadow-lg">
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
@@ -164,7 +160,6 @@
                 
             </div>
         </section>
-
             <!-- Experience-->
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
@@ -318,37 +313,31 @@
     </style>
 </head>
 <body class="bg-background text-primary">
-    
         <!-- 作品集 (Portfolio) 區塊 -->
         <section id="portfolio" class="py-20 px-4 sm:px-6 lg:px-8">
             <!-- 標題修改為 "作品集" -->
             <h2 class="text-4xl font-bold mb-4 text-center text-primary">作品集</h2>
             <p class="text-center text-lg text-secondary mb-12">點擊卡片查看作品細節 (將導向外部連結)</p>
-
             <!-- 搜尋與過濾 -->
             <div class="max-w-4xl mx-auto mb-8">
                 <!-- 搜尋框 -->
                 <input type="text" id="search-input" placeholder="依標題或類型搜尋作品..."
                     class="w-full p-3 rounded-xl border-2 border-surface focus:border-primary focus:ring-primary transition duration-200 shadow-inner text-primary bg-white">
-                
                 <!-- 過濾標籤 -->
                 <div id="filter-tags" class="flex flex-wrap gap-2 mt-4 justify-center">
                     <button data-filter="全部" class="filter-btn px-4 py-1 rounded-full text-sm font-medium bg-primary text-white hover:bg-secondary transition duration-150 shadow-md">全部</button>
                     <!-- 其他標籤將由 JS 動態生成 -->
                 </div>
             </div>
-
             <!-- 作品集網格 -->
             <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- 作品項目將由 JavaScript 動態插入 -->
             </div>
-            
             <!-- 搜尋結果為空時的提示 -->
             <div id="no-results" class="hidden text-center text-xl text-secondary py-10">
                 抱歉，沒有找到符合條件的作品。
             </div>
         </section>
-    
             <hr class="m-0" />
             <!-- Future-->
             <section class="resume-section" id="interests">
@@ -360,7 +349,6 @@
              </section>
              <hr class="m-0" />
           </div>    
-    
         <!-- 聯絡方式 (Contact) 區塊 -->
         <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-surface">
             <div class="max-w-2xl mx-auto text-center">
@@ -385,7 +373,6 @@
             </div>
         </section>
     </main>
-
     <!-- 頁腳 -->
     <footer class="py-8 text-center text-sm text-secondary border-t border-surface mt-10">
         &copy; 2025 Li Lok Yin. 版權所有. | 專業作品集網站
@@ -443,18 +430,14 @@
                 img: "https://placehold.co/400x300/1F2937/FFFFFF?text=塑膠彩研究" 
             },
         ];
-
         // DOM 元素
         const portfolioGrid = document.getElementById('portfolio-grid');
         const searchInput = document.getElementById('search-input');
         const filterTagsContainer = document.getElementById('filter-tags');
         const noResultsMessage = document.getElementById('no-results');
-
         // 當前過濾條件
         let currentFilter = '全部';
         let currentSearchTerm = '';
-
-
         /**
          * 渲染作品集網格中的單個作品卡片
          * @param {Object} item - 作品項目資料
@@ -481,26 +464,21 @@
                 </a>
             `;
         }
-
         /**
          * 根據過濾條件和搜尋詞渲染作品集
          */
         function renderPortfolioGrid() {
             const searchTerm = currentSearchTerm.toLowerCase();
             const filterType = currentFilter;
-
             const filteredItems = portfolioItems.filter(item => {
                 // 1. 類型過濾
                 const typeMatch = filterType === '全部' || item.type === filterType;
-
                 // 2. 搜尋詞過濾 (標題或描述)
                 const searchMatch = item.title.toLowerCase().includes(searchTerm) ||
                                     item.description.toLowerCase().includes(searchTerm) ||
                                     item.type.toLowerCase().includes(searchTerm);
-
                 return typeMatch && searchMatch;
             });
-
             portfolioGrid.innerHTML = filteredItems.map(renderPortfolioItem).join('');
 
             // 顯示或隱藏無結果提示
@@ -510,7 +488,6 @@
                 noResultsMessage.classList.add('hidden');
             }
         }
-
         /**
          * 產生並綁定過濾標籤的事件
          */
@@ -527,9 +504,7 @@
                     ${type}
                 </button>
             `).join('');
-
             filterTagsContainer.innerHTML = tagsHtml;
-
             // 綁定點擊事件
             document.querySelectorAll('.filter-btn').forEach(button => {
                 button.addEventListener('click', (e) => {
@@ -538,7 +513,6 @@
                         btn.classList.remove('bg-primary', 'text-white');
                         btn.classList.add('bg-surface', 'text-primary', 'hover:bg-gray-200');
                     });
-
                     // 為當前點擊的按鈕添加 'selected' 樣式
                     e.currentTarget.classList.remove('bg-surface', 'text-primary', 'hover:bg-gray-200');
                     e.currentTarget.classList.add('bg-primary', 'text-white');
@@ -547,7 +521,6 @@
                     renderPortfolioGrid();
                 });
             });
-            
             // 確保 '全部' 標籤預設為選中狀態
             const allButton = document.querySelector('[data-filter="全部"]');
             if (allButton) {
@@ -555,17 +528,13 @@
                 allButton.classList.add('bg-primary', 'text-white');
             }
         }
-
         // 2. 導航與 RWD 邏輯
-        
         // 漢堡選單控制
         const menuButton = document.getElementById('menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-
         menuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-
         // 點擊移動選單中的連結時關閉選單 (RWD)
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
@@ -574,14 +543,11 @@
                 }
             });
         });
-        
         // 3. 事件監聽器與初始化
-
         document.addEventListener('DOMContentLoaded', () => {
             // 初始化作品集網格與標籤
             initializeFilterTags();
             renderPortfolioGrid();
-
             // 搜尋輸入監聽
             searchInput.addEventListener('input', (e) => {
                 currentSearchTerm = e.target.value;
@@ -599,11 +565,9 @@
                     }
                     currentFilter = '全部'; // 邏輯上重設
                 }
-                
                 renderPortfolioGrid();
             });
         });
-
         // 確保連結使用平滑滾動，即使瀏覽器不支援 scroll-smooth CSS
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -613,7 +577,6 @@
                 });
             });
         });
-
     </script>
 </html>
 <!DOCTYPE html>
