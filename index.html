@@ -410,164 +410,157 @@
     </footer>
     
      <script>
-        // 1. 作品集資料 (Portfolio Data) 
-        const portfolioItems = [
-            { 
-                //title: "作品集2025", 
-                type: "作品集", 
-                link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing", 
-                description: "這是我目前的學習成果完整總結", 
-                img: "assets/img/作品集.png",
-                isCore: true
-            },
-            { 
-                 // 標題: 立體作品
-                type: "《Face Wardrobe》", 
-                title: "立體作品", 
-                link: "https://drive.google.com/file/d/17H6HTQIiE8EDH_5qIx-XkOR4Zmpe1Nu5/view?usp=drivesdk", 
-                description: "針對面具/虛偽所製造出來的作品", 
-                img: "assets/img/《Face Wardrobe》.png" 
-            },
-            { 
-                // 標題: 塑膠彩
-                type: "《隱藏》", 
-                title: "塑膠彩",  
-                link: "https://drive.google.com/file/d/17H6HTQIiE8EDH_5qIx-XkOR4Zmpe1Nu5/view?usp=drivesdk", 
-                description: "這是綜合媒材作品的總結", 
-                img: "assets/img/《隱藏》.png" 
-            },
-            { 
-                // 標題: 攝影作品
-                type: "攝影", 
-                title: "人像攝影", 
-                link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing", 
-                description: "一系列對人的攝影作品", 
-                img: "assets/img/人像攝影作品.png" 
-            },
-            { 
-                // 標題: 素描
-                type: "靜物素描", 
-                title: "素描",   
-                link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
-                description: "使用炭筆和鉛筆完成的作品", 
-                img: "assets/img/靜物素描.png" 
-            },
-            { 
-                // 標題: 平板繪圖
-                type: "電繪", 
-                title: "平板繪圖", 
-                link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing", 
-                description: "使用數位繪圖板創作的動畫角色", 
-                img: "assets/img/電繪.png" 
-            },
-             { 
-                // 標題: 《Face Wardrobe》分支小作品
-                type: "立體作品", 
-                title: "《Face Wardrobe》分支小作品",  
-                link: "https://drive.google.com/file/d/17H6HTQIiE8EDH_5qIx-XkOR4Zmpe1Nu5/view?usp=drivesdk", 
-                description: "這是綜合媒材作品的總結", 
-                img: "assets/img/《Face Wardrobe》分支小作品.png" 
-            }, { 
-                // 標題: 《Face Wardrobe》分支小作品2
-                type: "立體作品", 
-                title: "《Face Wardrobe》分支小作品2", 
-                link: "https://drive.google.com/file/d/17H6HTQIiE8EDH_5qIx-XkOR4Zmpe1Nu5/view?usp=drivesdk", 
-                description: "這是綜合媒材作品的總結", 
-                img: "assets/img/《Face Wardrobe》分支小作品2.png" 
-            }, { 
-                // 標題: 人像攝影作品2
-                type: "攝影", 
-                title: "人像攝影2", 
-                link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing", 
-                description: "一系列對人的攝影作品", 
-                img: "assets/img/人像攝影作品2.png"
-            }, { 
-                // 標題: 人像攝影作品3
-                type: "攝影", 
-                title: "人像攝影3", 
-                link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing", 
-                description: "一系列對人的攝影作品", 
-                img: "assets/img/人像攝影作品3.png"
-            }, { 
-                // 標題: 攝影作品
-                type: "攝影", 
-                title: "攝影", 
-                link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing", 
-                description: "攝影作品", 
-                img: "assets/img/攝影作品.png"
-            }, { 
-                // 標題: 攝影作品2
-                type: "攝影", 
-                title: "攝影2", 
-                link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing", 
-                description: "攝影作品", 
-                img: "assets/img/攝影作品2.png"
-            }, { 
-                // 標題: 攝影作品3
-                type: "攝影", 
-                title: "攝影3", 
-                link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing", 
-                description: "攝影作品", 
-                img: "assets/img/攝影作品3.png"
-            },  { 
-                // 標題: 攝影作品4
-                type: "攝影", 
-                title: "攝影4", 
-                link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing", 
-                description: "攝影作品", 
-                img: "assets/img/攝影作品4.png"
-            }, { 
-                // 標題: 攝影作品5
-                type: "攝影", 
-                title: "攝影5", 
-                link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
-                description: "攝影作品", 
-                img: "assets/img/攝影作品5.png"
-            }, { 
-                // 標題: 素描2
-                type: "靜物素描", 
-                title: "素描2",   
-                link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
-                description: "使用炭筆和鉛筆完成的作品", 
-                img: "assets/img/靜物素描2.png" 
-            }, { 
-                // 標題: 食品攝影作品
-                type: "攝影", 
-                title: "食品攝影作品", 
-                link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing", 
-                description: "一系列對食品的攝影作品", 
-                img: "assets/img/食品攝影作品.png"
-            }, { 
-                // 標題: 食品攝影作品2
-                type: "攝影", 
-                title: "食品攝影作品2", 
-                link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
-                description: "一系列對食品的攝影作品", 
-                img: "assets/img/食品攝影作品2.png"
-            }, { 
-                // 標題: 食品攝影作品3
-                type: "攝影", 
-                title: "食品攝影作品3", 
-                link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing", 
-                description: "一系列對食品的攝影作品", 
-                img: "assets/img/食品攝影作品3.png"
-            }, { 
-                // 標題: 時報金犢獎2025
-                type: "電繪", 
-                title: "時報金犢獎2025", 
-                link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing", 
-                description: "使用數位繪圖板創作的動畫角色", 
-                img: "assets/img/時報金犢獎2025.png"  
-            }, { 
-                // 標題: 專題樂高人設計
-                type: "電繪", 
-                title: "專題樂高人設計", 
-                link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing", 
-                description: "使用數位繪圖板創作的動畫角色", 
-                img: "assets/img/專題樂高人設計.png" 
-            } 
-        ];
-     </script>
+    // 作品集資料 (Portfolio Data)
+    const portfolioItems = [
+        {
+            type: "作品集",
+            link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
+            description: "這是我目前的學習成果完整總結",
+            img: "assets/img/作品集.png",
+            isCore: true
+        },
+        {
+            type: "立體作品",
+            title: "《Face Wardrobe》",
+            link: "https://drive.google.com/file/d/17H6HTQIiE8EDH_5qIx-XkOR4Zmpe1Nu5/view?usp=drivesdk",
+            description: "針對面具/虛偽所製造出來的作品",
+            img: "assets/img/《Face Wardrobe》.png"
+        },
+        {
+            type: "塑膠彩",
+            title: "《隱藏》",
+            link: "https://drive.google.com/file/d/17H6HTQIiE8EDH_5qIx-XkOR4Zmpe1Nu5/view?usp=drivesdk",
+            description: "這是綜合媒材作品的總結",
+            img: "assets/img/《隱藏》.png"
+        },
+        {
+            type: "攝影",
+            title: "人像攝影",
+            link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
+            description: "一系列對人的攝影作品",
+            img: "assets/img/人像攝影作品.png"
+        },
+        {
+            type: "靜物素描",
+            title: "素描",
+            link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
+            description: "使用炭筆和鉛筆完成的作品",
+            img: "assets/img/靜物素描.png"
+        },
+        {
+            type: "電繪",
+            title: "平板繪圖",
+            link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
+            description: "使用數位繪圖板創作的動畫角色",
+            img: "assets/img/電繪.png"
+        },
+        {
+            type: "立體作品",
+            title: "《Face Wardrobe》分支小作品",
+            link: "https://drive.google.com/file/d/17H6HTQIiE8EDH_5qIx-XkOR4Zmpe1Nu5/view?usp=drivesdk",
+            description: "這是綜合媒材作品的總結",
+            img: "assets/img/《Face Wardrobe》分支小作品.png"
+        },
+        {
+            type: "立體作品",
+            title: "《Face Wardrobe》分支小作品2",
+            link: "https://drive.google.com/file/d/17H6HTQIiE8EDH_5qIx-XkOR4Zmpe1Nu5/view?usp=drivesdk",
+            description: "這是綜合媒材作品的總結",
+            img: "assets/img/《Face Wardrobe》分支小作品2.png"
+        },
+        {
+            type: "攝影",
+            title: "人像攝影2",
+            link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
+            description: "一系列對人的攝影作品",
+            img: "assets/img/人像攝影作品2.png"
+        },
+        {
+            type: "攝影",
+            title: "人像攝影3",
+            link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
+            description: "一系列對人的攝影作品",
+            img: "assets/img/人像攝影作品3.png"
+        },
+        {
+            type: "攝影",
+            title: "攝影",
+            link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
+            description: "攝影作品",
+            img: "assets/img/攝影作品.png"
+        },
+        {
+            type: "攝影",
+            title: "攝影2",
+            link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
+            description: "攝影作品",
+            img: "assets/img/攝影作品2.png"
+        },
+        {
+            type: "攝影",
+            title: "攝影3",
+            link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
+            description: "攝影作品",
+            img: "assets/img/攝影作品3.png"
+        },
+        {
+            type: "攝影",
+            title: "攝影4",
+            link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
+            description: "攝影作品",
+            img: "assets/img/攝影作品4.png"
+        },
+        {
+            type: "攝影",
+            title: "攝影5",
+            link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
+            description: "攝影作品",
+            img: "assets/img/攝影作品5.png"
+        },
+        {
+            type: "靜物素描",
+            title: "素描2",
+            link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
+            description: "使用炭筆和鉛筆完成的作品",
+            img: "assets/img/靜物素描2.png"
+        },
+        {
+            type: "攝影",
+            title: "食品攝影作品",
+            link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
+            description: "一系列對食品的攝影作品",
+            img: "assets/img/食品攝影作品.png"
+        },
+        {
+            type: "攝影",
+            title: "食品攝影作品2",
+            link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
+            description: "一系列對食品的攝影作品",
+            img: "assets/img/食品攝影作品2.png"
+        },
+        {
+            type: "攝影",
+            title: "食品攝影作品3",
+            link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
+            description: "一系列對食品的攝影作品",
+            img: "assets/img/食品攝影作品3.png"
+        },
+        {
+            type: "電繪",
+            title: "時報金犢獎2025",
+            link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
+            description: "使用數位繪圖板創作的動畫角色",
+            img: "assets/img/時報金犢獎2025.png"
+        },
+        {
+            type: "電繪",
+            title: "專題樂高人設計",
+            link: "https://docs.google.com/presentation/d/1VawvaU9IuDurcyhTqJjsb3dAfIJ-iUJB_MGZQCTGNso/edit?usp=sharing",
+            description: "使用數位繪圖板創作的動畫角色",
+            img: "assets/img/專題樂高人設計.png"
+        }
+    ];
+</script>
     
         // DOM 元素
         const portfolioGrid = document.getElementById('portfolio-grid');
