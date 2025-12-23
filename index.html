@@ -26,6 +26,26 @@
     }
   }
 </script>
+        
+        /* 讓側邊欄避開頂部導航的高度 (64px) */
+#sideNav {
+    top: 64px !important; 
+    height: calc(100vh - 64px);
+}
+
+/* 防止主內容被側邊導航遮住 (電腦版) */
+@media (min-width: 992px) {
+    main, .container-fluid {
+        margin-left: 17rem; /* 配合側邊欄的寬度 */
+    }
+}
+
+/* 修正點擊導航跳轉後標題被擋住的問題 */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+        
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+TC:wght@100..900&display=swap');
     body {
