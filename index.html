@@ -589,31 +589,8 @@
             description: "使用炭筆和鉛筆完成的作品",
             img: "assets/img/靜物素描2.png"
         }
-
-    ]; // 補上陣列結尾
-
-// 1. 手機版選單開關
-document.getElementById('menu-button').onclick = () => {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
-};
-
-// 2. 渲染作品集
-const grid = document.getElementById('portfolio-grid');
-function renderPortfolio(items) {
-    grid.innerHTML = items.map(item => `
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-            <img src="${item.img}" class="w-full h-48 object-cover">
-            <div class="p-4">
-                <span class="text-blue-500 text-xs font-bold uppercase">${item.type}</span>
-                <h3 class="text-lg font-bold text-primary mt-1">${item.title}</h3>
-                <p class="text-gray-500 text-sm mt-2 line-clamp-2">${item.description}</p>
-                <a href="${item.link}" target="_blank" class="text-primary font-medium mt-3 inline-block hover:underline">查看作品 →</a>
-            </div>
-        </div>
-    `).join('');
-}
-renderPortfolio(portfolioItems);
-</script>
+    ]; 
+         
         // DOM 元素
         const portfolioGrid = document.getElementById('portfolio-grid');
         const searchInput = document.getElementById('search-input');
